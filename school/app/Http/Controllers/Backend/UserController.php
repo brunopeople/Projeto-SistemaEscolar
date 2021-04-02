@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function UserView(){
-        dd('view user')
+      
+        //$allData = User::all();
+
+        $data['allData'] = User::all();
+        $data['asdf'] = crm::all();
+        return view('backend.user.view_user', $data);
     }
 }
